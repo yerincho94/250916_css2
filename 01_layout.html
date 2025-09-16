@@ -3,13 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[조옐] 입니다!</title>
+    <title>안녕하세요 조예린 입니다!</title>
     <!-- 
     1. favicon
     2. og tag
     3. webfont 
     -->
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/./favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/./favicon.svg" />
+    <link rel="shortcut icon" href="/./favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/./apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/./site.webmanifest" />
+
+    <!-- og tag  -->
+    <meta property="og:title" content="조옐입니다요!" />
+    <meta
+      property="og:description"
+      content="꾸준히 성장하는 조옐의 포트폴리오입니다. 안정적인 시스템과 더 나은 사용자 가치를 만들기 위한 열정과 고민을 담았습니다."
+    />
+    <meta property="og:image" content="" />
+
     <style>
+      /* webfont */
       @font-face {
         font-family: "BookkMyungjo";
         src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Lt.woff2")
@@ -34,32 +59,117 @@
         font-display: swap;
       }
 
+      body {
+        font-family: "BookkMyungjo";
+      }
+
+      /* 색상 설정 */
+      /* 
+        1. 전체 배경색 : #bfbfbf
+        2. 박스색 : #57687c
+        3. 컨텐트색(강조색) : #F7CAC9
+        4. 글자색 : #5c5c5c
+      */
       .title {
         font-family: "NoonnuBasicGothic";
+        color: #333333;
+      }
+
+      * {
+        box-sizing: border-box; /* 모든 box width, height를 우리 지정에 맞게 설정 */
       }
 
       body {
-        font-family: "BookkMyungjo";
+        margin: 0; /* 기본 margin 제거 */
+        background-color: #bfbfbf;
+        color: #bfbfbf;
+      }
+
+      .box {
+        background-color: #57687c;
+        padding: 12px;
+        border-radius: 12px;
+        /* border-radius: 10%; : 0~50% */
+      }
+
+      /* 레이아웃 : Box Model, flex */
+      body > section {
+        /* body에 바로 속산 section */
+        /* 자식 선택자 -> 바로 속한 경우 */
+        padding: 24px;
+      }
+
+      #intro .title {
+        text-align: center;
+      }
+
+      #intro div {
+        line-height: 2;
+      }
+
+      #tech-stack ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        /* justify-content: center; */
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+      }
+
+      #tech-stack li {
+        list-style: none;
+        width: 128px;
+        aspect-ratio: 1;
+        background-color: #f7cac9;
+        border-radius: 8px;
+        border: 4px transparent solid;
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #tech-stack img {
+        width: 90%;
+        padding: 8px;
+        border-radius: 50%;
+        background-color: white;
       }
     </style>
   </head>
   <body>
-    <h1 class="title">안녕하세요, 성장하는 백엔드 개발자 [조예린] 입니다.</h1>
+    <section id="intro">
+      <h1 class="title">
+        안녕하세요! <br />
+        성장하는 백엔드 개발자 [조예린] 입니다.
+      </h1>
+      <section class="box">
+        <div>
+          저는 문제를 해결하고 더 나은 사용자 경험을 만드는 과정에서 즐거움을
+          느낍니다.<br />
+          새로운 기술을 배우고 적용하는 것을 좋아하며, 꾸준한 학습을 통해
+          어제보다 더 나은 개발자가 되기 위해 노력하고 있습니다.
+        </div>
+      </section>
+    </section>
 
-    <p>
-      저는 문제를 해결하고 더 나은 사용자 경험을 만드는 과정에서 즐거움을
-      느낍니다.<br />
-      새로운 기술을 배우고 적용하는 것을 좋아하며, 꾸준한 학습을 통해 어제보다
-      더 나은 개발자가 되기 위해 노력하고 있습니다.
-    </p>
+    <!-- flex 기반 레이아웃, 이미지: svg repo -->
+    <!-- 기술 스택 (부트캠프) -->
+    <section id="tech-stack">
+      <section class="box">
+        <h2>👩🏻‍💻기술 스택</h2>
+        <ul>
+          <li><img src="img/java.png" alt="JAVA" /></li>
+          <li><img src="img/spring.png" alt="SPRING" /></li>
+          <li><img src="img/mysql.png" alt="MYSQL" /></li>
+          <li><img src="img/aws.png" alt="AWS" /></li>
+          <li><img src="img/github.png" alt="GIT" /></li>
+        </ul>
+      </section>
+    </section>
 
-    <h2>🛠️ 기술 스택</h2>
-    <!-- 여기에 사용 가능한 기술들을 나열해 보세요. 예: Java, Spring, Python, Django, MySQL, AWS 등 -->
-
-    <h2>🚀 프로젝트</h2>
+    <!-- 포트폴리오(3종) -->
     <!-- 진행했던 프로젝트들을 여기에 소개해 보세요. -->
-
-    <h2>📬 연락처</h2>
-    <!-- GitHub, 기술 블로그, 이메일 등을 추가하여 연락할 수 있는 방법을 알려주세요. -->
   </body>
 </html>
