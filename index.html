@@ -31,7 +31,8 @@
       property="og:description"
       content="꾸준히 성장하는 조옐의 포트폴리오입니다. 안정적인 시스템과 더 나은 사용자 가치를 만들기 위한 열정과 고민을 담았습니다."
     />
-    <meta property="og:image" content="" />
+    
+    <meta property="og:image" content="preview.png" />
 
     <style>
       /* webfont */
@@ -93,10 +94,25 @@
       }
 
       /* 레이아웃 : Box Model, flex */
+      body {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        /* 위에서 아래 방행으로 쌓아서 처리 */
+      }
+
       body > section {
         /* body에 바로 속산 section */
         /* 자식 선택자 -> 바로 속한 경우 */
-        padding: 24px;
+        /* padding: 24px; */
+        padding: 0 24px;
+        max-width: 576px;
+        width: 100%;
+        margin: auto;
+      }
+
+      h2 {
+        margin-top: 0;
       }
 
       #intro .title {
@@ -136,6 +152,21 @@
         border-radius: 50%;
         background-color: white;
       }
+
+      #portfolio .box {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      #portfolio .item {
+        background-color: #926b6a;
+        width: 100%;
+        height: 160px;
+        border-radius: 8px;
+        border: 2px #bfbfbf dotted;
+        padding: 0 16px;
+      }
     </style>
   </head>
   <body>
@@ -171,5 +202,31 @@
 
     <!-- 포트폴리오(3종) -->
     <!-- 진행했던 프로젝트들을 여기에 소개해 보세요. -->
+    <section id="portfolio">
+      <section class="box">
+        <h2>📝 포트폴리오</h2>
+        <div class="item">
+          <h3>여행 추천 프로젝트</h3>
+          <p>
+            사용자 맞춤형 여행지를 추천하는 웹 서비스입니다. Spring Boot와 JPA를
+            사용하여 안정적인 백엔드 시스템을 구축했습니다.
+          </p>
+        </div>
+        <div class="item">
+          <h3>재능 매칭 프로젝트</h3>
+          <p>
+            다양한 분야의 전문가와 사용자를 연결하는 플랫폼입니다. 실시간 채팅
+            기능을 구현하고, MySQL을 이용해 데이터를 관리했습니다.
+          </p>
+        </div>
+        <div class="item">
+          <h3>AWS 인프라 프로젝트</h3>
+          <p>
+            AWS EC2, S3, RDS를 활용하여 확장 가능하고 안정적인 클라우드 인프라를
+            설계하고 배포한 경험이 있습니다.
+          </p>
+        </div>
+      </section>
+    </section>
   </body>
 </html>
